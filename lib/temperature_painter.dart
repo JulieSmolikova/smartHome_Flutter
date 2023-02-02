@@ -14,18 +14,14 @@ class TempetaturePainter extends CustomPainter {
       ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2.5);
 
     pathTemp.moveTo(size.width * 0.15, size.height);
-    pathTemp.cubicTo(size.width * 0.07, size.height * 0.85,
-        size.width * 0.03, size.height * 0.65,
-        size.width * 0.08, size.height * 0.5);
-    pathTemp.cubicTo(size.width * 0.15, size.height * 0.25,
-        size.width * 0.35, size.height * 0.15,
-        size.width * 0.5, size.height * 0.15);
-    pathTemp.cubicTo(size.width * 0.65, size.height * 0.15,
-        size.width * 0.85, size.height * 0.25,
-        size.width * 0.92, size.height * 0.5);
-    pathTemp.cubicTo(size.width * 0.97, size.height * 0.65,
-        size.width * 0.93, size.height * 0.85,
-        size.width * 0.85, size.height);
+    pathTemp.cubicTo(size.width * 0.07, size.height * 0.85, size.width * 0.03,
+        size.height * 0.65, size.width * 0.08, size.height * 0.5);
+    pathTemp.cubicTo(size.width * 0.15, size.height * 0.25, size.width * 0.35,
+        size.height * 0.15, size.width * 0.5, size.height * 0.15);
+    pathTemp.cubicTo(size.width * 0.65, size.height * 0.15, size.width * 0.85,
+        size.height * 0.25, size.width * 0.92, size.height * 0.5);
+    pathTemp.cubicTo(size.width * 0.97, size.height * 0.65, size.width * 0.93,
+        size.height * 0.85, size.width * 0.85, size.height);
 
     canvas.drawPath(pathTemp, paintTemp);
 
@@ -52,18 +48,14 @@ class TempetaturePainter extends CustomPainter {
       ..isAntiAlias = true;
 
     path.moveTo(size.width * 0.11, size.height);
-    path.cubicTo(size.width * 0.07, size.height * 0.85,
-        size.width * 0.03, size.height * 0.65,
-        size.width * 0.08, size.height * 0.5);
-    path.cubicTo(size.width * 0.15, size.height * 0.25,
-        size.width * 0.35, size.height * 0.15,
-        size.width * 0.5, size.height * 0.15);
-    path.cubicTo(size.width * 0.65, size.height * 0.15,
-        size.width * 0.85, size.height * 0.25,
-        size.width * 0.92, size.height * 0.5);
-    path.cubicTo(size.width * 0.97, size.height * 0.65,
-        size.width * 0.93, size.height * 0.85,
-        size.width * 0.89, size.height);
+    path.cubicTo(size.width * 0.07, size.height * 0.85, size.width * 0.03,
+        size.height * 0.65, size.width * 0.08, size.height * 0.5);
+    path.cubicTo(size.width * 0.15, size.height * 0.25, size.width * 0.35,
+        size.height * 0.15, size.width * 0.5, size.height * 0.15);
+    path.cubicTo(size.width * 0.65, size.height * 0.15, size.width * 0.85,
+        size.height * 0.25, size.width * 0.92, size.height * 0.5);
+    path.cubicTo(size.width * 0.97, size.height * 0.65, size.width * 0.93,
+        size.height * 0.85, size.width * 0.89, size.height);
     path.lineTo(size.width * 0.11, size.height);
 
     canvas.drawPath(path, paint);

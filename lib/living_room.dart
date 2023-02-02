@@ -4,7 +4,6 @@ import 'package:smart_home/constants.dart';
 import 'package:smart_home/button.dart';
 import 'package:smart_home/temperature_box.dart';
 import 'package:smart_home/temperature_painter.dart';
-import 'package:smart_home/temperature_painter.dart';
 import 'package:smart_home/painter_temp_box.dart';
 
 class LivingRoom extends StatefulWidget {
@@ -45,14 +44,15 @@ class _LivingRoomState extends State<LivingRoom> {
                       Container(
                         height: size.height * 0.07,
                         width: size.width,
-                        decoration:
-                            const BoxDecoration(color: KDBlue, boxShadow: [
-                          BoxShadow(
-                              color: Colors.black,
-                              blurRadius: 80,
-                              spreadRadius: 45,
-                              offset: Offset(35, -35))
-                        ]),
+                        decoration: BoxDecoration(
+                            color: KDBlue.withOpacity(0.7),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Colors.black,
+                                  blurRadius: 80,
+                                  spreadRadius: 45,
+                                  offset: Offset(35, -35))
+                            ]),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -123,20 +123,99 @@ class _LivingRoomState extends State<LivingRoom> {
                 ),
               ),
               Positioned(
-                top: size.height * 0.47,
+                top: size.height * 0.475,
                 left: 0,
                 child: Container(
                   height: size.height * 0.22,
                   width: size.width,
-                  color: Colors.red,
+                  color: Colors.transparent,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [Button(), Button(), Button()],
+                    children: [
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                            Button(
+                                color: KBlueButton,
+                                colorBox: KBlueButton,
+                                child: Image.asset(
+                                  'assets/icons/tv.png',
+                                  height: 18,
+                                ),
+                                childUp: Image.asset(
+                                  'assets/icons/up.png',
+                                  height: 18,
+                                ),
+                                childDown: Image.asset(
+                                  'assets/icons/down.png',
+                                  height: 18,
+                                )),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                            const Text('TV', style: styleBottom)
+                          ]),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                            Button(
+                              color: KPinkButton,
+                              colorBox: KPinkButton,
+                              child: Image.asset(
+                                'assets/icons/bulb.png',
+                                height: 20,
+                              ),
+                              childUp: Image.asset(
+                                'assets/icons/up.png',
+                                height: 18,
+                              ),
+                              childDown: Image.asset(
+                                'assets/icons/down.png',
+                                height: 18,
+                              ),
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                            const Text('Light', style: styleBottom)
+                          ]),
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                            Button(
+                                color: KVioletButton,
+                                colorBox: KVioletButton,
+                                child: Image.asset(
+                                  'assets/icons/wifi.png',
+                                  height: 18,
+                                ),
+                                childUp: Image.asset(
+                                  'assets/icons/up.png',
+                                  height: 18,
+                                ),
+                                childDown: Image.asset(
+                                  'assets/icons/down.png',
+                                  height: 18,
+                                )),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                            const Text('Wi-Fi', style: styleBottom)
+                          ])
+                    ],
                   ),
                 ),
               ),
-
               Positioned(
                 top: size.height * 0.69,
                 child: Container(
@@ -146,17 +225,19 @@ class _LivingRoomState extends State<LivingRoom> {
                   child: CustomPaint(painter: PainterTempBox()),
                 ),
               ),
-
               Positioned(
                   top: size.height * 0.735,
-                  left: size.width * 0.625,
+                  left: size.width * 0.627,
                   child: Container(
-                    height: size.height * 0.05,
-                    width: size.width * 0.1,
-                    color: Colors.transparent,
-                    child: Text('o', style: TextStyle(fontSize: 14, fontFamily: 'Orbitron', color: Colors.white70.withOpacity(0.5), fontWeight: FontWeight.bold))
-                  )),
-
+                      height: size.height * 0.05,
+                      width: size.width * 0.1,
+                      color: Colors.transparent,
+                      child: Text('o',
+                          style: TextStyle(
+                              fontSize: 17,
+                              fontFamily: 'good',
+                              color: Colors.white70.withOpacity(0.5),
+                              fontWeight: FontWeight.bold)))),
               Positioned(
                   top: size.height * 0.78,
                   left: size.width * 0.61,
@@ -164,9 +245,13 @@ class _LivingRoomState extends State<LivingRoom> {
                     height: size.height * 0.05,
                     width: size.width * 0.1,
                     color: Colors.transparent,
-                    child: Text('c', style: TextStyle(fontSize: 16, fontFamily: 'Orbitron', color: Colors.white70.withOpacity(0.5), fontWeight: FontWeight.bold)),
+                    child: Text('c',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'Orbitron',
+                            color: Colors.white70.withOpacity(0.5),
+                            fontWeight: FontWeight.bold)),
                   )),
-
               Positioned(
                   top: size.height * 0.69,
                   child: Column(
@@ -177,7 +262,7 @@ class _LivingRoomState extends State<LivingRoom> {
                         height: size.height * 0.15,
                         width: size.width,
                         color: Colors.transparent,
-                        child: TemperatureBox(),
+                        child: const TemperatureBox(),
                       ),
                       Container(
                         height: size.height * 0.13,

@@ -24,22 +24,22 @@ class BackgrounPendantLight extends CustomPainter {
     pathLine.moveTo(0, size.height * 0.79);
     pathLine.quadraticBezierTo(size.width * 0.03, size.height * 0.83,
         size.width * 0.05, size.height * 0.84);
-    pathLine.cubicTo(size.width * 0.1, size.height * 0.87, size.width * 0.15, size.height * 0.865,
-        size.width * 0.2, size.height * 0.87);
-    pathLine.cubicTo(size.width * 0.29, size.height * 0.88, size.width * 0.31, size.height * 0.92,
-        size.width * 0.31, size.height * 0.93);
-    pathLine.cubicTo(size.width * 0.33, size.height * 0.99, size.width * 0.41, size.height * 0.998,
-        size.width * 0.45, size.height);
+    pathLine.cubicTo(size.width * 0.1, size.height * 0.87, size.width * 0.15,
+        size.height * 0.865, size.width * 0.2, size.height * 0.87);
+    pathLine.cubicTo(size.width * 0.29, size.height * 0.88, size.width * 0.31,
+        size.height * 0.92, size.width * 0.31, size.height * 0.93);
+    pathLine.cubicTo(size.width * 0.33, size.height * 0.99, size.width * 0.41,
+        size.height * 0.998, size.width * 0.45, size.height);
 
     pathLine.moveTo(size.width, size.height * 0.79);
     pathLine.quadraticBezierTo(size.width * 0.97, size.height * 0.83,
         size.width * 0.95, size.height * 0.84);
-    pathLine.cubicTo(size.width * 0.9, size.height * 0.87, size.width * 0.85, size.height * 0.865,
-        size.width * 0.8, size.height * 0.87);
-    pathLine.cubicTo(size.width * 0.71, size.height * 0.88, size.width * 0.69, size.height * 0.92,
-        size.width * 0.69, size.height * 0.93);
-    pathLine.cubicTo(size.width * 0.67, size.height * 0.99, size.width * 0.59, size.height * 0.998,
-        size.width * 0.55, size.height);
+    pathLine.cubicTo(size.width * 0.9, size.height * 0.87, size.width * 0.85,
+        size.height * 0.865, size.width * 0.8, size.height * 0.87);
+    pathLine.cubicTo(size.width * 0.71, size.height * 0.88, size.width * 0.69,
+        size.height * 0.92, size.width * 0.69, size.height * 0.93);
+    pathLine.cubicTo(size.width * 0.67, size.height * 0.99, size.width * 0.59,
+        size.height * 0.998, size.width * 0.55, size.height);
 
     canvas.drawPath(pathLine, paintLine);
 
@@ -67,7 +67,6 @@ class BackgrounPendantLight extends CustomPainter {
       ..strokeWidth = 3.0
       ..isAntiAlias = true;
 
-
     path.moveTo(size.width * 0.43, 0);
     path.lineTo(size.width * 0.43, size.height * 0.35);
     path.cubicTo(size.width * 0.44, size.height * 0.39, size.width * 0.45,
@@ -82,22 +81,22 @@ class BackgrounPendantLight extends CustomPainter {
     path.moveTo(0, size.height * 0.77);
     path.quadraticBezierTo(size.width * 0.03, size.height * 0.83,
         size.width * 0.05, size.height * 0.84);
-    path.cubicTo(size.width * 0.1, size.height * 0.87, size.width * 0.15, size.height * 0.865,
-        size.width * 0.2, size.height * 0.87);
-    path.cubicTo(size.width * 0.29, size.height * 0.88, size.width * 0.31, size.height * 0.92,
-        size.width * 0.31, size.height * 0.93);
-    path.cubicTo(size.width * 0.33, size.height * 0.99, size.width * 0.41, size.height * 0.99,
-        size.width * 0.45, size.height);
+    path.cubicTo(size.width * 0.1, size.height * 0.87, size.width * 0.15,
+        size.height * 0.865, size.width * 0.2, size.height * 0.87);
+    path.cubicTo(size.width * 0.29, size.height * 0.88, size.width * 0.31,
+        size.height * 0.92, size.width * 0.31, size.height * 0.93);
+    path.cubicTo(size.width * 0.33, size.height * 0.99, size.width * 0.41,
+        size.height * 0.99, size.width * 0.45, size.height);
 
     path.lineTo(size.width * 0.55, size.height);
-    path.cubicTo(size.width * 0.59, size.height * 0.99, size.width * 0.67, size.height * 0.99,
-        size.width * 0.69, size.height * 0.93);
-    path.cubicTo(size.width * 0.69, size.height * 0.92, size.width * 0.71, size.height * 0.88,
-        size.width * 0.8, size.height * 0.87);
-    path.cubicTo(size.width * 0.85, size.height * 0.865, size.width * 0.9, size.height * 0.87,
-        size.width * 0.95, size.height * 0.84);
-    path.quadraticBezierTo(size.width * 0.97, size.height * 0.83,
-        size.width, size.height * 0.77);
+    path.cubicTo(size.width * 0.59, size.height * 0.99, size.width * 0.67,
+        size.height * 0.99, size.width * 0.69, size.height * 0.93);
+    path.cubicTo(size.width * 0.69, size.height * 0.92, size.width * 0.71,
+        size.height * 0.88, size.width * 0.8, size.height * 0.87);
+    path.cubicTo(size.width * 0.85, size.height * 0.865, size.width * 0.9,
+        size.height * 0.87, size.width * 0.95, size.height * 0.84);
+    path.quadraticBezierTo(
+        size.width * 0.97, size.height * 0.83, size.width, size.height * 0.77);
     path.lineTo(size.width, size.height);
     path.lineTo(0, size.height);
     path.lineTo(0, size.height * 0.77);
