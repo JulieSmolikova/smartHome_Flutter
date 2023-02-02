@@ -123,14 +123,14 @@ class _LivingRoomState extends State<LivingRoom> {
                 ),
               ),
               Positioned(
-                top: size.height * 0.475,
+                top: size.height * 0.48,
                 left: 0,
                 child: Container(
                   height: size.height * 0.22,
                   width: size.width,
                   color: Colors.transparent,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Column(
@@ -159,6 +159,7 @@ class _LivingRoomState extends State<LivingRoom> {
                             ),
                             const Text('TV', style: styleBottom)
                           ]),
+                      SizedBox(width: size.width * 0.11),
                       Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -186,6 +187,7 @@ class _LivingRoomState extends State<LivingRoom> {
                             ),
                             const Text('Light', style: styleBottom)
                           ]),
+                      SizedBox(width: size.width * 0.11),
                       Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [

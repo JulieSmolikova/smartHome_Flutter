@@ -28,7 +28,7 @@ class _ButtonState extends State<Button> {
   Widget build(BuildContext context) {
     return Container(
         height: MediaQuery.of(context).size.height * 0.16,
-        width: MediaQuery.of(context).size.width * 0.17,
+        width: MediaQuery.of(context).size.width * 0.19,
         color: Colors.transparent,
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           GestureDetector(
@@ -114,8 +114,8 @@ class _ButtonState extends State<Button> {
                     ),
                   ),
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.17,
                     height: MediaQuery.of(context).size.height * 0.16,
+                    width: MediaQuery.of(context).size.width * 0.19,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         border: Border.all(
@@ -128,7 +128,7 @@ class _ButtonState extends State<Button> {
                     duration: const Duration(milliseconds: 500),
                     child: AnimatedCrossFade(
                       firstChild: Container(
-                        width: MediaQuery.of(context).size.width * 0.16,
+                        width: MediaQuery.of(context).size.width * 0.18,
                         height: MediaQuery.of(context).size.height * 0.12,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
@@ -138,7 +138,7 @@ class _ButtonState extends State<Button> {
                                 end: Alignment.bottomCenter)),
                       ),
                       secondChild: Container(
-                        width: MediaQuery.of(context).size.width * 0.16,
+                        width: MediaQuery.of(context).size.width * 0.18,
                         height: MediaQuery.of(context).size.height * 0.12,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
