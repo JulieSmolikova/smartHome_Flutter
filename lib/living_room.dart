@@ -5,6 +5,7 @@ import 'package:smart_home/button.dart';
 import 'package:smart_home/temperature_box.dart';
 import 'package:smart_home/temperature_painter.dart';
 import 'package:smart_home/temperature_painter.dart';
+import 'package:smart_home/painter_temp_box.dart';
 
 class LivingRoom extends StatefulWidget {
   const LivingRoom({Key? key}) : super(key: key);
@@ -22,8 +23,9 @@ class _LivingRoomState extends State<LivingRoom> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Color(0xff1a1c29),
+          backgroundColor: const Color(0xff1a1c29),
           body: Stack(
+            alignment: Alignment.center,
             children: [
               Positioned(
                 top: 0,
@@ -120,7 +122,6 @@ class _LivingRoomState extends State<LivingRoom> {
                   ),
                 ),
               ),
-
               Positioned(
                 top: size.height * 0.47,
                 left: 0,
@@ -137,8 +138,37 @@ class _LivingRoomState extends State<LivingRoom> {
               ),
 
               Positioned(
+                top: size.height * 0.69,
+                child: Container(
+                  height: size.height * 0.15,
+                  width: size.width,
+                  color: Colors.transparent,
+                  child: CustomPaint(painter: PainterTempBox()),
+                ),
+              ),
+
+              Positioned(
+                  top: size.height * 0.735,
+                  left: size.width * 0.625,
+                  child: Container(
+                    height: size.height * 0.05,
+                    width: size.width * 0.1,
+                    color: Colors.transparent,
+                    child: Text('o', style: TextStyle(fontSize: 14, fontFamily: 'Orbitron', color: Colors.white70.withOpacity(0.5), fontWeight: FontWeight.bold))
+                  )),
+
+              Positioned(
+                  top: size.height * 0.78,
+                  left: size.width * 0.61,
+                  child: Container(
+                    height: size.height * 0.05,
+                    width: size.width * 0.1,
+                    color: Colors.transparent,
+                    child: Text('c', style: TextStyle(fontSize: 16, fontFamily: 'Orbitron', color: Colors.white70.withOpacity(0.5), fontWeight: FontWeight.bold)),
+                  )),
+
+              Positioned(
                   top: size.height * 0.69,
-                  left: 0,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -149,7 +179,6 @@ class _LivingRoomState extends State<LivingRoom> {
                         color: Colors.transparent,
                         child: TemperatureBox(),
                       ),
-
                       Container(
                         height: size.height * 0.13,
                         width: size.width,
@@ -162,13 +191,13 @@ class _LivingRoomState extends State<LivingRoom> {
                                       style: TextStyle(
                                           fontSize: 16,
                                           fontFamily: 'Orbitron',
-                                          color: Colors.white70.withOpacity(0.5),
+                                          color:
+                                              Colors.white70.withOpacity(0.5),
                                           fontWeight: FontWeight.bold)))),
                         ),
                       ),
                     ],
                   )),
-
             ],
           ),
         ),
